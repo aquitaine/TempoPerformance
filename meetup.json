@@ -1,0 +1,41 @@
+{
+    "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
+    "Continue with free plan": {
+        "detectors": [
+            {
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": "a, button, [role='button']",
+                            "textFilter": "Continue with free plan"
+                        }
+                    }
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": "a, button, [role='button']",
+                            "textFilter": "Continue with free plan",
+                            "displayFilter": true
+                        }
+                    }
+                ]
+            }
+        ],
+        "methods": [
+            {
+                "name": "UTILITY",
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "a, button, [role='button']",
+                        "textFilter": "Continue with free plan",
+                        "displayFilter": true
+                    }
+                }
+            }
+        ]
+    }
+}
